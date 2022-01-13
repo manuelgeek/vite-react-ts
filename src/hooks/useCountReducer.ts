@@ -17,7 +17,7 @@ export default function useCountReducer() {
             case 'increment':
                 return { count: state.count + 1 };
             case 'decrement':
-                return { count: state.count - 1 };
+                return { count: state.count ? state.count - 1 : 0 };
             default:
                 throw new Error();
         }
